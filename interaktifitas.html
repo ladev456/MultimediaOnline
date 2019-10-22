@@ -4,15 +4,16 @@
         {
             background-color: #ccc;
         }
+		
     </style>
 <body>
     <center>
-    <h3>Double Click untuk Memutus Garis </h3>
+    <h3>Double Klik untuk Memutus Garis </h3>
     <h3>Tekan Enter untuk Memberi Warna</h3>
     </center>
 	<center>
     <canvas height="450" width="900" id="canvas"></canvas>
-	</center>
+	</center> 
 </body>
 <script>
     var canvas = document.getElementById('canvas');
@@ -55,8 +56,31 @@
 location.reload()
 }
 </script>
+<script>
+
+function gantikanvas(kode){
+var kanvas=document.getElementById("canvas");
+kanvas.getContext("2d").fillStyle=kode;
+
+kanvas.getContext("2d").fillRect(0, 0, kanvas.width, kanvas.height); 
+
+}
+</script>
+
+<center><p>Ganti Warna Canvas</p></center>
 <center>
+<p>
+  <input type="button" value="Merah" onclick="gantikanvas('#FF0000')" />
+  <input type="button"  value="Kuning" onclick="gantikanvas('#FFFF00')" />
+  <input type="button"  value="Hijau" onclick="gantikanvas('#00FF00')" />
+  <input type="button"  value="Biru" onclick="gantikanvas('#0066FF')" />
+  <input type="button"  value="Hitam" onclick="gantikanvas('#000000')" />
+  <input type="button"  value="Putih" onclick="gantikanvas('#FFFFFF')" />
+  <input type="button"  value="Cokelat" onclick="gantikanvas('#663300')" />
+</p>
+</center>
 <br>
+<left-side>
  <input type="submit"  value="Refresh Layar" onClick="document.location.reload(true)">
- </center>
+ </left-side>
 </html>
