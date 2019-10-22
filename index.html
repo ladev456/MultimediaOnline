@@ -1,17 +1,40 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="en" >
 <head>
-<title>Multimedia Online</title>
+  <meta charset="UTF-8">
+  <title>Parallax Depth Cards</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Playfair+Display:700|Raleway:500.700'><link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
-<h1>Multimedia Online</h1>
-<h3>Nama : Muhammad Luthfiansyah</h3>
-<h4>NIM : 1700016011</h4>
-<ul>
-  <li><a href="canvas.html">Praktikum 1 - Canvas HTML</a></li>
-  <li><a href="interaktifitas.html">Praktikum 2  - Interaktifitas</a></li>
-  <li><a href="vector.html">Praktikum 3 - Vektor Pattern</a></li>
-  <li><a href="puzzle.html">Praktikum 4 - Puzzle</a></li>
-</ul>
+<!-- partial:index.partial.html -->
+<h1 class="title">MULTIMEDIA ONLINE</h1>
+
+<div id="app" class="container">
+<a href="https://ladev456.github.io/MultimediaOnline/canvas.html">
+  <card data-image="https://images.unsplash.com/photo-1479660656269-197ebb83b540?dpr=2&auto=compress,format&fit=crop&w=1199&h=798&q=80&cs=tinysrgb&crop=">
+    <h1 slot="header">Canvas</h1>
+    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </card>
+  <card data-image="https://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
+    <h1 slot="header">Beaches</h1>
+    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </card>
+ 
+  <a href="https://www.w3schools.com/html/">
+  <card data-image="image/vector.png">
+	<h1 slot="header">Vector</h1>
+    <p slot="content">Praktikum 3 </p>
+  </a>
+  </card>
+  <card data-image="https://cdn11.bigcommerce.com/s-do0ookap9x/images/stencil/1280x1280/products/21319/28293/44450_main__69668.1551455451.jpg?c=2&imbypass=on">
+    <h1 slot="header">Puzzle</h1>
+    <p slot="content">Praktikum 4.</p>
+  </card>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js'></script><script  src="./script.js"></script>
+
 </body>
 </html>
