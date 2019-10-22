@@ -1,0 +1,62 @@
+<html>
+    <style>
+        canvas
+        {
+            background-color: #ccc;
+        }
+    </style>
+<body>
+    <center>
+    <h3>Double Click untuk Memutus Garis </h3>
+    <h3>Tekan Enter untuk Memberi Warna</h3>
+    </center>
+	<center>
+    <canvas height="450" width="900" id="canvas"></canvas>
+	</center>
+</body>
+<script>
+    var canvas = document.getElementById('canvas');
+    var line = canvas.getContext('2d');
+
+    document.body.addEventListener('mousedown',drawline);
+
+    function drawline(e)
+    {
+        var x = e.offsetX;
+        var y = e.offsetY;
+        line.lineTo(x,y);
+        line.lineWidth = 5;
+        line.strokeStyle = "white";
+        line.stroke();
+    }
+
+    document.body.addEventListener("dblclick",garis);
+    function garis()
+    {
+        line.beginPath();
+        var x = e.offsetX;
+        var y = e.offsetY;
+        line.lineTo(x,y);
+        line.lineWidth = 5;
+        line.strokeStyle = "white";
+        line.stroke();
+    }
+    document.body.addEventListener("keydown",warna)
+    function warna(e)
+    {
+        if(e.keyCode == 13)
+        {
+            line.fillStyle = "blue";
+            line.fill();
+        }
+    }
+	function reloadpage()
+{
+location.reload()
+}
+</script>
+<center>
+<br>
+ <input type="submit"  value="Refresh Layar" onClick="document.location.reload(true)">
+ </center>
+</html>
